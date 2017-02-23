@@ -1,0 +1,26 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+## MLM Exercise 1 ##
+**Clemens Spielvogel**
+
+```{r}
+x <- rnorm(100, mean=165, sd=5)
+y <- rnorm(50, mean=175, sd=5)
+
+z <- data.frame(height=c(x, y),
+                gender=factor(rep(c('female',  'male'),
+                                  c(length(x), length(y)))))
+z1 <- subset(z, height >= 175)
+
+summary(z1)
+
+with(z1, tapply(height, gender, function(x) c(mean = mean(x),
+                                              sd = sd(x))))
+
+plot(z)
+```
+
+

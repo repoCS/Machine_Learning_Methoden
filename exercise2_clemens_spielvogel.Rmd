@@ -1,0 +1,57 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+## MLM Exercise 1 ##
+**Clemens Spielvogel**
+
+Loading the milk dataset
+
+```{r}
+library(flexclust)
+data(milk)
+```
+
+# Summarize the data. What is it about?
+```{r}
+summary(milk)
+plot(milk)
+```
+
+# Use PCA to visualize the data in two dimensions.
+```{r}
+pr.out <- prcomp(milk, scale=T)
+biplot(pr.out)
+```
+
+# What information is given on the four axes of the biplot? What
+# do dolphins and seals have in common?
+```{r}
+
+```
+
+# Cluster the milk data using hierarchical clustering. What kind of
+# grouping do you see? What distance measure and linkage
+# method did you use?
+```{r}
+
+```
+
+# Plot a heatmap of the milk data. How would you modify the
+# breaks in order to see differences in ash, lactose and protein?
+```{r}
+
+```
+
+# Cluster the milk data using k–means clustering. How many
+# clusters are in the data?
+```{r}
+
+```
+# Visualize your cluster solution on the first and second principal
+# component using the argument xlabs
+```{r}
+
+```
